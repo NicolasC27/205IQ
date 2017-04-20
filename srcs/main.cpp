@@ -5,7 +5,7 @@
 // Login   <valentin.gerard@epitech.eu>
 // 
 // Started on  Mon Apr 10 17:33:14 2017 Valentin Gérard
-// Last update Thu Apr 20 15:23:49 2017 Valentin Gérard
+// Last update Thu Apr 20 15:33:29 2017 Valentin Gérard
 //
 
 #include "IQ.hpp"
@@ -42,23 +42,27 @@ static bool	IQ_4(double mu, double sigma, double IQ1, double IQ2)
 
 int	main(int ac, char *av[])
 {
+  int	mu;
   if (ac < 2 || ac > 6)
     return (EXIT_FAILED);
   if (ac == 2 && strcmp(av[1], "-h") == 0)
     help();
   else if (ac == 3 && isNumber(av[1]) && isNumber(av[2]))
     {
-      if (!IQ_2(atof(av[1]), atof(av[2])))
+      mu = atof(av[1]);
+      if (mu < 0 || mu > 200 || !IQ_2(mu, atof(av[2])))
 	return (EXIT_FAILED);
     }
   else if (ac == 4 && isNumber(av[1]) && isNumber(av[2]) && isNumber(av[3]))
     {
-      if (!IQ_3(atof(av[1]), atof(av[2]), atof(av[3])))
+      mu = atof(av[1]);
+      if (mu < 0 || mu > 200 || !IQ_3(mu, atof(av[2]), atof(av[3])))
 	return (EXIT_FAILED);
     }
   else if (ac == 5 && isNumber(av[1]) && isNumber(av[2]) && isNumber(av[3]) && isNumber(av[4]))
     {
-      if (!IQ_4(atof(av[1]), atof(av[2]), atof(av[3]), atof(av[4])))
+      mu = atof(av[1]);
+      if (mu < 0 || mu > 200 || !IQ_4(mu, atof(av[2]), atof(av[3]), atof(av[4])))
 	return (EXIT_FAILED);
     }
   else
