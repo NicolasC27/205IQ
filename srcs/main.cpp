@@ -5,7 +5,7 @@
 // Login   <valentin.gerard@epitech.eu>
 // 
 // Started on  Mon Apr 10 17:33:14 2017 Valentin Gérard
-// Last update Mon Apr 10 19:53:26 2017 Valentin Gérard
+// Last update Thu Apr 20 15:23:49 2017 Valentin Gérard
 //
 
 #include "IQ.hpp"
@@ -28,7 +28,7 @@ static bool	IQ_3(double mu, double sigma, double IQ1)
 {
   IQ		iq(mu, sigma, IQ1);
 
-  std::cout << std::setprecision(1) << std::fixed << iq.probabilite(IQ1) * 100 << "% of people have a IQ inferior to " << std::setprecision(0) << IQ1 << std::endl;
+  std::cout << std::setprecision(1) << std::fixed << iq.probabilite(IQ1) * 100 << "% of pepole have a IQ inferior to " << std::setprecision(0) << IQ1 << std::endl;
   return (true);
 }
 
