@@ -28,7 +28,7 @@ static bool	IQ_3(double mu, double sigma, double IQ1)
 {
   IQ		iq(mu, sigma, IQ1);
 
-  std::cout << std::setprecision(1) << std::fixed << iq.probabilite(IQ1) * 100 << "% of pepole have a IQ inferior to " << std::setprecision(0) << IQ1 << std::endl;
+  std::cout << std::setprecision(1) << std::fixed << iq.probabilite(IQ1) * 100 << "% of people have a IQ inferior to " << std::setprecision(0) << IQ1 << std::endl;
   return (true);
 }
 
