@@ -31,7 +31,7 @@ def parser():
     qimax = 200
 
     if histo == 1:
-        if len(sys.argv) == 5:
+        if len(sys.argv) >= 5:
             print("./205QI 1 [mu] [gamma] only two argument.")
             exit(0)
     if len(sys.argv) == 5:
