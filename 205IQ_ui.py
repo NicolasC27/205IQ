@@ -91,8 +91,8 @@ def board(mu, gamma, histo):
             plt.title(r'$\mathrm{Histogram\ of\ IQ:}\ \mu=%s,\ \sigma=%s $'%(mu, gamma))
             plt.ylabel('Probability', fontsize=15)
         else:
-            plt.title('Intelligence Quotient', fontsize=20)
-            plt.ylabel('Probability', fontsize=15)
+            plt.title(r'$\mathrm{Intelligence\ Quotient:}\ \mu=%s,\ \sigma=%s $'%(mu, gamma))
+            plt.ylabel('Probability (%s)', fontsize=15)
         plt.xlabel('QI', fontsize=15)
         plt.legend()
         plt.grid(True)
